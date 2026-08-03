@@ -45,8 +45,8 @@ Bárbara ama la cocina real, honesta y orgánica. Esta web es su espacio para co
 
 ## Contacto
 
-Bárbara: (su email cuando lo decida)
-Desarrollado por: Juan Andrés
+Bárbara: pestanobarbcontrataciones@gmail.com
+Desarrollado por: Juan Andrés Pestano
 
 ---
 
