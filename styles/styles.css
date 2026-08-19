@@ -1,0 +1,491 @@
+/* Variables de colores y fuentes */
+:root{
+    --verder-sage: #B1C095;
+    --verde-oscuro: #6A7D4F;
+    --crema: #E6DED1;
+    --crema-obscuro: #DACFBB;
+    --gris-calido: #746C64;
+    --carbon: #1C1C1C;
+    --blanco: #FFFFFF;
+
+    --font-titulo: Georgia, 'Times New Roman', Times, serif;
+    --font-cuerpo: system-ui, sans-serif;
+
+    --radio: 16px;
+    --radio-grande: 24px;
+}
+/* Reset Básico */
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--crema);
+    color: var(--carbon);
+    font-family: var(--font-cuerpo);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+/* Header y Navegación */
+
+.header{
+    background-color: var(--crema-obscuro);
+    padding: 0 48px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--crema-obscuro);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo{
+    font-family: var(--font-titulo);
+    font-size: 20px;
+    font-weight: normal;
+    color: var(--verde-oscuro);
+    color: var(--verde-oscuro);
+    letter-spacing: 0.01em;
+}
+
+
+.navegacion ul{
+list-style: none;
+display: flex;
+gap: 8px;
+align-items: center;
+}
+
+.navegacion ul li a{
+    font-family: var(--font-cuerpo);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--carbon);
+    padding: 8px 16px;
+    border-radius: 50px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.navegacion ul li a:hover{
+    background-color: var(--verde-oscuro); 
+    color: var(--blanco)
+}
+
+/* HERO */
+
+.hero{
+    background-color:var(--verder-sage);
+    padding: 80px 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    min-height: 520px;
+}
+
+.hero_texto{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero_badge{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--verde-oscuro);
+    color: var(--blanco);   
+    font-size: 13px;
+    font-weight:  600;
+    padding: 6px 14px;
+    border-radius: 50px;
+    width: fit-content;
+}
+
+.hero_badge::before{
+    content: '🟢';
+    font-size: 8px;
+    color: var(--verder-sage);
+}
+
+.hero h2{
+    font-family: var(--font-titulo);
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: bold;
+    line-height: 1.1;
+    color: var(--verde-oscuro);
+}
+
+.hero span{
+   color: var(--verde-oscuro);
+}
+
+.hero_descripcion{
+    font-size: 17px;
+    color: var(--gris-calido);
+    max-width: 440px;
+    line-height: 1.65;
+}
+
+.hero_botones{
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+/* Botones */
+
+.btn{
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--verde-oscuro);
+    color: var(--blanco);
+    gap: 8px;
+    font-family: var(--font-titulo);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 50px;
+    border: 2px solid var(--verde-oscuro);
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn:hover{
+    background-color: var(--carbon);
+    border-color: var(--carbon);
+}
+
+.hero_imagen{
+    position: relative;
+}
+
+.hero_imagen-marco{
+    border-radius: var(--radio-grande);
+    overflow: hidden;
+    border: 2px solid var(--verde-oscuro);
+    aspect-ratio: 4/3;
+    background-color: var(--verde-oscuro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+}
+
+.hero_imagen-marco img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero_badge-imagen{
+    position: absolute;
+    bottom: -16px;
+    left: 24px;
+    background-color: var(--blanco);
+    border: 1px solid var(--crema-obscuro);
+    border-radius: 50px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--verde-oscuro);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Stats-Hero*/
+
+.hero_stats{
+    display: flex;
+    gap: 32px;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(106, 125, 79, 0.3);
+}
+
+.hero_stat-valor{
+    font-family: var(--font-titulo);
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--carbon);
+    line-height: 1;
+}
+
+.hero_stat-etiqueta{
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gris-calido);
+    margin-top: 2px;
+}
+
+/* SECCIÓN RECETAS FAVORITAS */
+
+.recetas-favoritas{
+    padding: 72px 48px;
+    background-color: var(--blanco);
+}
+
+.seccion_cabecera{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.seccion_etiqueta{
+    display: inline-block;
+    background-color: var(--crema-obscuro);
+    color: var(--gris-calido);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 50px;
+    margin-bottom: 8px;
+}
+
+.seccion_titulo{
+    font-family: var(--font-titulo);
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--carbon);
+}
+
+.seccion_ver-todas{
+    font-size: 14px;
+    font-weight: 600;
+    background-color: var(--crema-obscuro);
+    color: var(--gris-calido);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.2s;
+    padding: 4px 12px;
+    border-radius: 50px;
+    
+}
+
+.seccion_ver-todas:hover{
+    color: var(--carbon);
+    
+}
+
+/* Grid de Tarjetas */
+
+.recetas-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* Tarjeta de recetas */
+
+.tarjeta-receta{
+    background-color: var(--blanco);
+    border: 1px solid var(--crema-obscuro);
+    border-radius: var(--radio-grande);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.tarjeta-receta:hover{
+    transform: translate(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.tarjeta-receta_imagen{
+    aspect-ratio: 4/3;
+    background-color: var(--crema-obscuro);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+}
+
+.tarjeta-receta_imagen img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tarjeta-receta_categoria{
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: var(--verde-oscuro);
+    color: var(--blanco);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 50px;
+}
+
+.tarjeta-receta_cuerpo{
+    padding: 20px;
+}
+
+.tarjeta-receta_titulo{
+    font-family: var(--font-titulo);
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--carbon);
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.tarjeta-receta_descripcion{
+font-size: 14px;
+color: var(--gris-calido);
+line-height: 1.5;
+margin-bottom: 16px;
+}
+
+.tarjeta-receta_meta{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--gris-calido);
+    flex-wrap: wrap;
+}
+
+.tarjeta-receta span{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.tarjeta-receta_dificultad{
+    background-color: var(--crema);
+    color: var(--verde-oscuro);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 50px;
+}
+
+/* SECCION MI FILOSOFÍA */
+
+.filosofia{
+    background-color:var(--verde-oscuro);
+    padding: 72px 48px;
+}
+
+.filosofia .seccion_etiqueta{
+    background-color: rgba(32, 23, 23, 0.15);
+    color: var(--carbon);
+}
+
+.filosofia .seccion-titulo{
+    color: var(--blanco);
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.filosofia-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.filosofia-card{
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--radio-grande);
+    padding: 28px 24px;
+}
+
+.filosofia-card_icono{
+    font-size: 32px;
+    margin-bottom: 16px;
+    background-color: rgba(255, 255, 255, 0.12);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filosofia-card_titulo{
+    font-family: var(--font-titulo);
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--blanco);
+    margin-bottom: 6px;
+}
+
+.filosofia-card_texto{
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.6;
+}
+
+/* FOOTER */
+.footer{
+    background-color: var(--carbon);
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    padding: 24px 48px;
+    font-size: 14px;
+}
+
+.footer a {
+    color: var(--verder-sage);
+}
+
+/* RESPONSIVE */
+
+
+@media (max-width: 768px) {
+    .header{
+        padding: 0 20px;
+        height: auto;
+        flex-direction: column;
+        gap: 12px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .hero{
+        grid-template-columns: 1fr;
+        padding: 48px 20px;
+    }
+
+    .hero_imagen{
+        display: none;
+    }
+
+    .recetas-favoritas, .filosofia{
+        padding: 48px 20px;
+    }
+
+    .recetas-grid, .filosofia-grid{
+        grid-template-columns: 1fr;
+    }
+}
