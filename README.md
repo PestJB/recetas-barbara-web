@@ -4,7 +4,7 @@
 
 ## Sobre este proyecto
 
-Bárbara cree en la cocina real, honesta y orgánica. Esta web es su espacio para compartir recetas vegetarianas, explicar el proceso paso a paso y conectar con gente que quiere aprender a cocinar bien.
+Bárbara cree en la cocina real, honesta y orgánica. Esta web es su espacio para compartir recetas vegetarianas, explicar el proceso paso a paso y conectar con gente que quiere aprender a cocinar sano y disfrutar.
 
 **Este es un proyecto real, con cliente real, y sirve como parte de mi portfolio de desarrollo.**
 
